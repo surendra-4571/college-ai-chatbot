@@ -1,0 +1,132 @@
+.input-box {
+  padding: 16px;
+  background: white;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 14px;
+  resize: vertical;
+  transition: all 0.2s;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+textarea:disabled {
+  background: #f7fafc;
+  color: #a0aec0;
+}
+
+.input-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.language-selector {
+  position: relative;
+}
+
+.language-selector button {
+  padding: 8px 12px;
+  background: #edf2f7;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.language-selector button:hover {
+  background: #e2e8f0;
+}
+
+.language-dropdown {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 4px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.language-dropdown button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px 16px;
+  background: white;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.language-dropdown button:hover {
+  background: #f7fafc;
+}
+
+.language-dropdown button.active {
+  background: #667eea;
+  color: white;
+}
+
+.execute-btn, .send-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.execute-btn {
+  background: #48bb78;
+  color: white;
+}
+
+.execute-btn:hover:not(:disabled) {
+  background: #38a169;
+}
+
+.send-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  flex-grow: 1;
+}
+
+.send-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .input-controls {
+    flex-wrap: wrap;
+  }
+
+  .send-btn {
+    flex-grow: 1;
+  }
+}
